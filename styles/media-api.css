@@ -1,0 +1,104 @@
+#api select {
+    background: linear-gradient(#8121ff, #a915ff);
+}
+
+#img-api img, #api iframe,
+#api button, #api select, #api input {
+    box-shadow: 1px 1px 4px #4445 !important;
+}
+
+#img-api img, #api iframe,
+.music-loader, .music-loader .icon, .music-loader .load img,
+.video-loader, .video-loader img {
+    
+    max-width: calc(95vw - 4px);
+    max-height: calc(95vw - 4px);
+    border-radius: 24px;
+}
+
+#video-api iframe, .video-loader, .video-loader img {
+    max-height: 60vw;
+}
+
+#video-api .ctrl-box {
+    max-width: 400px;
+}
+
+#music-api .ctrl-box > *, #video-api .ctrl-box > * {
+    max-width: 90vw;
+}
+
+#api [id^="get-rand-"] {
+    display: none;
+}
+
+#img-api button {
+
+    border: 2px solid #00cfa2;
+    color: #00cfa2;
+    transition: background-color 0.2s, transform 0.05s;
+}
+
+#img-api button:hover {
+
+    background: #00cfa2;
+    color: white;
+}
+
+#img-api button:active {
+    transform: scale(0.9);
+}
+
+#api input {
+    border: 2px solid;
+}
+
+#token-input {
+
+    border-color: #ff006a;
+    color: #ff006a;
+}
+
+#search-track-input {
+
+    border-radius: 20px 0 0 20px;
+    border-color: #34c767;
+    color: #34c767;
+}
+
+#search-track-input::placeholder {
+    color: #34c767c5;
+}
+
+#key-input {
+
+    border-color: #00a2ff;
+    color: #00a2ff;
+}
+
+#search-video-input {
+
+    border-radius: 20px 0 0 20px;
+    border-color: #ff0000;
+    color: #ff0000;
+}
+
+#search-video-input::placeholder {
+    color: #ff3232be;
+}
+
+#search-track, #search-video {
+    border-radius: 0 20px 20px 0;
+}
+
+#search-track {
+
+    background-color: #34c767;
+    color: #34c767;
+}
+
+#search-video {
+
+    background-color: #ff0000;
+    color: #ff0000;
+}

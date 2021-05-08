@@ -1,0 +1,170 @@
+/* RESETS */
+button, a {
+    box-shadow: none !important;
+}
+
+a:focus-visible, select, input {
+    outline: none;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+header {
+
+    z-index: 1000;
+    transition: transform 0.5s;
+}
+
+nav {
+    transition: background-color 0.5s;
+}
+
+header.solid {
+    box-shadow: 0px 3px 6px #444a;
+}
+
+header.solid nav {
+    background-color: white;
+}
+
+header.solid .navbar-brand, header.solid a {
+    color: black !important;
+}
+
+header.solid nav a:hover {
+    color: #00b7ff !important;
+}
+
+header.solid a.active {
+    color: #1abc9c !important;
+}
+
+header.solid .scroll-progress {
+    opacity: 1;
+}
+
+.scroll-progress {
+
+    opacity: 0;
+    height: 5px;
+    background: #aeaeff;
+    transition: opacity 0.5s;
+}
+
+.scroll-progress-bar {
+    background: #6262ff;
+}
+
+/* HOME SECTION */
+#home {
+    height: 100vh;
+}
+
+#home h1, #home .about, #home .banner-links {
+    opacity: 0;
+}
+
+.hero-img {
+
+    background: url('../assets/banner.jpeg');
+    background-size: cover;
+    background-position: 50%;
+}
+
+.banner-caption {
+    z-index: 1;
+}
+
+.banner-caption a:first-of-type, .banner-caption a:hover {
+    color: rgb(133, 133, 0);
+}
+
+@media only screen and (max-width: 768px) {
+    
+    #home, #home > * {
+        height: 70vh !important;
+    }
+
+    #home .hero-img {
+        background-position: 30%;
+    }
+
+    #home .about {
+        font-size: 1.4rem !important;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    #home, #home > * {
+        height: 55vh !important;
+    }
+
+    #home .about {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* TOOLTIPS SECTION */
+#tooltips .card {
+
+    position: relative;
+    max-width: 350px;
+    min-height: 150px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 3px grey;
+    cursor: pointer;
+}
+
+#tooltips .card-header {
+
+    border-radius: 9px 9px 0 0;
+    background: linear-gradient(90deg, #4b0082, #5c148f, #920c92);
+}
+
+@media only screen and (min-width: 1380px) {
+
+    #tooltips .col {
+        width: fit-content;
+    }
+}
+
+/* API SECTION */
+#img-api h3 {
+    color: #00cfa2;
+}
+
+#music-api h3 {
+    color: #34c767;
+}
+
+#video-api h3 {
+    color: #ff0000;
+}
+
+#img-api .media {
+
+    border: 2px solid #00cfa2;
+    border-radius: 24px;
+}
+
+#api a {
+    color: #00b600;
+}
+
+#api a:hover {
+    color: #5900ff;
+}
+
+/* FOOTER */
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: #34C767;
+}

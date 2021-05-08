@@ -1,0 +1,189 @@
+/* PRELOADER */
+.preloader {
+
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+}
+
+.circle {
+
+    background: #ef4430;
+    animation: loading-anim-bounce 1.4s infinite;
+}
+
+.circle:nth-child(2) {
+
+    background: #4286f5;
+    animation-delay: 0.1s;
+}
+
+.circle:nth-child(3) {
+
+    background: #35a853;
+    animation-delay: 0.2s;
+}
+
+.circle:last-child {
+
+    background: #fabc05;
+    animation-delay: 0.3s;
+}
+
+/* BANNER ANIMATION */
+.banner-h1-anim {
+    animation: fade-right 1.25s;
+}
+
+.about-anim {
+    animation: fade-right 0.75s 0.5s;
+}
+
+.banner-links-anim {
+    animation: fade-right 0.6s 0.75s;
+}
+
+@keyframes fade-right {
+    
+    0% {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* TOOLTIPS AND POPUPS ANIMATION WHEN SCROLLED INTO VIEW */
+#tooltips .card, #popups button {
+    opacity: 0;
+}
+
+.rise-anim {
+    animation: fade-in-up 0.5s;
+}
+
+@keyframes fade-in-up {
+    
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* IMAGE LOADER */
+.img-loader {
+    display: none;
+}
+
+.img-loader img {
+    box-shadow: none !important;
+}
+
+.img-loader .circle {
+
+    background: #00cfa2;
+    transform: scale(0.6);
+    animation: loading-anim-scale 1.1s infinite;
+}
+
+.img-loader .circle:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.img-loader .circle:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.img-loader .circle:last-child {
+    animation-delay: 0.3s;
+}
+
+@keyframes loading-anim-scale {
+    
+    0% {
+        transform: scale(0.6);
+        background: #00cfa2;
+    }
+    50% {
+        transform: scale(1.0);
+        background: #00ffc8;
+    }
+    100% {
+        transform: scale(0.6);
+        background: #00daaa;
+    }
+}
+
+/* MUSIC LOADER */
+.music-loader {
+
+    background: #191414;
+    color: #34c767;
+}
+
+.music-loader .load {
+    display: none;
+}
+
+.music-loader .load img {
+    animation: icon-anim 2s infinite;
+}
+
+@keyframes icon-anim {
+    
+    0%  { transform: scale(1.0) }
+    50% { transform: scale(0.8) }
+    90% { transform: scale(1.0) }
+}
+
+.music-loader .load div {
+
+    font-family: 'Roboto Condensed', sans-serif;
+    letter-spacing: 2px;
+    animation: float-anim 2s infinite;
+}
+
+@keyframes float-anim {
+    
+    0%  { opacity: 1.0 }
+    50% { opacity: 0.6 }
+    90% { opacity: 1.0 }
+}
+
+/* VIDEO LOADER */
+.video-loader {
+    border: 2px solid #ff3116;
+}
+
+.video-loader .load-anim {
+    display: none;
+}
+
+.video-loader .circle {
+    animation: loading-anim-bounce 1.4s infinite;
+}
+
+.video-loader .circle:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.video-loader .circle:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.video-loader .circle:last-child {
+    animation-delay: 0.6s;
+}
+
+@keyframes loading-anim-bounce {
+    
+    0%    { transform: translateY(0px)   }
+    50%   { transform: translateY(-20px) }
+    100%  { transform: translateY(0px)   }
+}

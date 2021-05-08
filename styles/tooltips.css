@@ -1,0 +1,180 @@
+/* NORMAL TOOLTIP */
+.z-tooltip {
+
+    opacity: 0;
+    padding: 8px;
+    width: fit-content;
+    position: absolute;
+    bottom: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    border-radius: 12px;
+    pointer-events: none;
+    z-index: 100;
+    transition: all 0.15s ease-in-out;
+}
+
+.z-tooltip::after {
+
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid;
+    border-color: #333 transparent transparent transparent;
+}
+
+.card:hover .z-tooltip {
+    opacity: 0.95;
+}
+
+/* FADE-IN-UP TOOLTIP */
+.tt-fade-up {
+    transform: translate(-50%, 40px);
+}
+
+.card:hover .tt-fade-up {
+    transform: translate(-50%, 0);
+}
+
+/* EXPANDING TOOLTIP */
+.tt-expand {
+
+    transform-origin: 0%;
+    animation: expand-in 0.4s;
+}
+
+.card:hover .tt-expand {
+    animation: expand-out 0.4s;
+}
+
+.tt-expand:after {
+
+    opacity: 0;
+    transform: translate(-50%, -10px);
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .tt-expand:after {
+
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: all 0.3s .2s ease-in-out;
+}
+
+@keyframes expand-in {
+    
+    0% {
+        transform: scale(1, 1)
+        translateX(-50%)
+    }
+    100% { 
+        transform: scale(0, 0)
+        translateX(-50%)
+    }
+}
+
+@keyframes expand-out {
+    
+    0% {
+        transform: scale(0, 0)
+        translateX(-50%)
+    }
+    50% {
+        transform: scale(1.2, 1.2)
+        translateX(-50%)
+    }
+    100% {
+        transform: scale(1, 1)
+        translateX(-50%)
+    }
+}
+
+/* ATTENTION TOOLTIP */
+.tt-attention {
+    transform-origin: 0%;
+}
+
+.card:hover .tt-attention {
+    animation: shake 0.15s linear 0.15s 3;
+}
+
+@keyframes shake {
+    
+    0%   { transform: rotate(0deg)  translateX(-50%) }
+    25%  { transform: rotate(-5deg) translateX(-50%) }
+    50%  { transform: rotate(0deg)  translateX(-50%) }
+    75%  { transform: rotate(5deg)  translateX(-50%) }
+    100% { transform: rotate(0deg)  translateX(-50%) }
+}
+
+/* MOUSE FOLLOWING TOOLTIP */
+#tt-mouse-follower {
+
+    height: fit-content;
+    transform: translate(-50%, -100%);
+    transition-property: opacity;
+}
+
+/* WIERDLY ANIMATED TOOLTIP */
+.tt-flip-open1, .tt-flip-open2 {
+
+    position: absolute;
+    bottom: 105%;
+    padding: 10px;
+    width: 48% !important;
+    z-index: 1;
+    opacity: 0;
+    transition-duration: 0.5s;
+}
+
+.tt-flip-open1 {
+
+    right: 49.96%;
+    background: #4b0082cc;
+    border-radius: 12px 0 0 12px;
+    transform-origin: 100% 50%;
+    transform: perspective(1000px) rotate3d(-0.4, 0.8, 0.4, 90deg);
+}
+
+.tt-flip-open2 {
+
+    left: 49.96%;
+    background: #920c92cc;
+    border-radius: 0 12px 12px 0;
+    transform-origin: 0% 50%;
+    transform: perspective(1000px) rotate3d(-0.8, 0.4, 0.8, 180deg);
+}
+
+.tt-flip-open1::after,
+.tt-flip-open2::after {
+
+    content: "";
+    position: absolute;
+    top: 100%;
+    border-top: 6px solid;
+}
+
+.tt-flip-open1::after {
+
+    left: 100%;
+    border-right: 6px solid;
+    border-color: #920c92cc transparent transparent transparent;
+}
+
+.tt-flip-open2::after {
+
+    right: 100%;
+    border-left: 6px solid;
+    border-color: #4b0082cc transparent transparent transparent;
+}
+
+.card:hover .tt-flip-open1,
+.card:hover .tt-flip-open2 {
+
+    opacity: 1;
+    transform: rotate3d(0, 0, 0, 0deg);
+}

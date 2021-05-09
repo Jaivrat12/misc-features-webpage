@@ -100,10 +100,6 @@ header.solid .scroll-progress {
 
 @media only screen and (max-width: 480px) {
 
-    #home, #home > * {
-        height: 55vh !important;
-    }
-
     #home .about {
         font-size: 1.2rem !important;
     }

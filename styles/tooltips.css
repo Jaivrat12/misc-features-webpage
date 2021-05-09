@@ -1,42 +1,102 @@
-/* NORMAL TOOLTIP */
-.z-tooltip {
+/* BASIC/DEFAULT TOOLTIP STYLING */
+#tooltips {
 
-    opacity: 0;
-    padding: 8px;
-    width: fit-content;
+    margin-top: -50px;
+}
+
+#tooltips .container {
+
+    border: none;
+}
+
+#tooltips .wrapper {
+
+    display: grid;
+    grid-gap: 40px 40px;
+    grid-template-columns: auto auto auto;
+}
+
+.tooltip {
+
+    position: relative;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    box-shadow: 1px 1px 3px gray;
+    cursor: pointer;
+}
+
+.tooltip-title {
+
+    padding: 10px;
+    font-size: large;
+    background: linear-gradient(90deg, #4b0082, #5c148f, #920c92);
+    border-radius: 12px 12px 0 0;
+}
+
+.tooltip div {
+    
+    color: black;
+    padding: 0 12px;
+    display: grid;
+    place-content: center;
+    font-size: large;
+    height: 100%;
+    border-radius: 0 0 12px 12px;
+}
+
+.tooltip-text {
+
+    /* visibility: hidden; */
     position: absolute;
-    bottom: 105%;
+    bottom: 110%;
     left: 50%;
     transform: translateX(-50%);
-    background: #333;
-    color: white;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 12px;
-    pointer-events: none;
-    z-index: 100;
+    background: #202020cc;
+    color: white;
+    text-align: center;
+    /* pointer-events: none; */
+    z-index: 1;
+    opacity: 0;
     transition: all 0.15s ease-in-out;
 }
 
-.z-tooltip::after {
+.tooltip-text::after {
 
     content: "";
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%);
-    border: 6px solid;
-    border-color: #333 transparent transparent transparent;
+    margin-left: -10px;
+    border: 10px solid;
+    border-color: #202020cc transparent transparent transparent;
 }
 
-.card:hover .z-tooltip {
-    opacity: 0.95;
+.tooltip:hover .tooltip-text {
+
+    /* visibility: visible; */
+    opacity: 1;
 }
 
-/* FADE-IN-UP TOOLTIP */
+
+/* MUTATING THE REST OF THE TOOLTIPS! */
+
+/* FADE-UP TOOLTIP */
 .tt-fade-up {
-    transform: translate(-50%, 40px);
+
+    transform: translate(-50%, 10px);
 }
 
-.card:hover .tt-fade-up {
+.tooltip:hover .tt-fade-up {
+
     transform: translate(-50%, 0);
 }
 
@@ -47,21 +107,22 @@
     animation: expand-in 0.4s;
 }
 
-.card:hover .tt-expand {
+.tooltip:hover .tt-expand {
+
     animation: expand-out 0.4s;
 }
 
 .tt-expand:after {
 
     opacity: 0;
-    transform: translate(-50%, -10px);
+    transform: translateY(-10px);
     transition: all 0.5s ease-in-out;
 }
 
-.card:hover .tt-expand:after {
+.tooltip:hover .tt-expand:after {
 
     opacity: 1;
-    transform: translate(-50%, 0);
+    transform: translateY(0);
     transition: all 0.3s .2s ease-in-out;
 }
 
@@ -95,10 +156,12 @@
 
 /* ATTENTION TOOLTIP */
 .tt-attention {
+
     transform-origin: 0%;
 }
 
-.card:hover .tt-attention {
+.tooltip:hover .tt-attention {
+
     animation: shake 0.15s linear 0.15s 3;
 }
 
@@ -112,20 +175,19 @@
 }
 
 /* MOUSE FOLLOWING TOOLTIP */
-#tt-mouse-follower {
+#tt-follower {
 
-    height: fit-content;
-    transform: translate(-50%, -100%);
-    transition-property: opacity;
+    /* transform: translate(-84%, -400%); */
 }
 
 /* WIERDLY ANIMATED TOOLTIP */
 .tt-flip-open1, .tt-flip-open2 {
 
     position: absolute;
-    bottom: 105%;
+    bottom: 110%;
     padding: 10px;
-    width: 48% !important;
+    width: 40%;
+    text-align: center;
     z-index: 1;
     opacity: 0;
     transition-duration: 0.5s;
@@ -155,25 +217,25 @@
     content: "";
     position: absolute;
     top: 100%;
-    border-top: 6px solid;
+    border-top: 10px solid;
 }
 
 .tt-flip-open1::after {
 
     left: 100%;
-    border-right: 6px solid;
+    border-right: 10px solid;
     border-color: #920c92cc transparent transparent transparent;
 }
 
 .tt-flip-open2::after {
 
     right: 100%;
-    border-left: 6px solid;
+    border-left: 10px solid;
     border-color: #4b0082cc transparent transparent transparent;
 }
 
-.card:hover .tt-flip-open1,
-.card:hover .tt-flip-open2 {
+.tooltip:hover .tt-flip-open1,
+.tooltip:hover .tt-flip-open2 {
 
     opacity: 1;
     transform: rotate3d(0, 0, 0, 0deg);

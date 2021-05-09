@@ -1,0 +1,127 @@
+/* BASIC/DEFAULT POP-UP */
+#popups .wrapper {
+
+    display: grid;
+    grid-template-columns: auto;
+    gap: 50px 100px;
+}
+
+.popup-btn {
+
+    padding: 20px;
+    background: #ff6811;
+    color: white;
+    text-align: center;
+    border: 1px solid #0004;
+    box-shadow: 2px 2px 3px #999c;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+
+    background: #ff823a;
+}
+
+.popup-btn:active {
+
+    background: #b15119;
+}
+
+.popup {
+
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    background: #0006;
+    z-index: 1;
+}
+
+.popup-box {
+
+    position: relative;
+    padding-top: 12px;
+    width: 300px;
+    background: white;
+    box-shadow: 2px 2px 3px #000a;
+}
+
+.popup-anim {
+
+    animation: popup-anim 0.6s;
+}
+
+@keyframes popup-anim {
+    
+    0%   { opacity: 0; transform: translateY(20px) }
+    50%  { opacity: 1; transform: translateY(-5px) }
+    100% { transform: translateY(0) }
+}
+
+.close {
+
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-size: xx-large;
+    cursor: pointer;
+}
+
+.popup-msg {
+
+    display: grid;
+    grid-template-rows: 30% 3% 60%;
+}
+
+.popup-msg hr {
+
+    margin: 4px auto;
+    width: 82%;
+    border-top: 1px solid #cccc;
+}
+
+.popup-title {
+
+    text-align: center;
+    font-weight: bold;
+}
+
+.popup-msg div {
+
+    padding: 10px 0;
+    text-align: center;
+    place-self: center;
+}
+
+/* NOTIFYING POP-UP */
+#notify {
+
+    visibility: hidden;
+    padding: 15px 20px;
+    position: fixed;
+    top: 88%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #6700b1, #00a2d3, #88df16, #00a2d3, #6700b1);
+    color: white;
+    font-size: large;
+    border-radius: 32px;
+    box-shadow: 2px 2px 5px #000c;
+    transform-origin: 0%;
+    z-index: 1;
+}
+
+.notify-anim {
+
+    animation: notif-anim 0.3s;
+}
+
+@keyframes notif-anim {
+    
+    0%   { opacity: 0; transform: translate(-50%, 100%) }
+    100% { opacity: 1; transform: translate(-50%, 0) }
+}

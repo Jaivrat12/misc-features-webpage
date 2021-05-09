@@ -1,0 +1,49 @@
+nav {
+
+    display: grid;
+    grid-template-columns: 2% 10% 38% 50%;
+    grid-template-areas: ". logo . navbar";
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    transition: background-color 0.5s;
+}
+
+header.solid {
+
+    box-shadow: 0px 3px 6px #444a;
+}
+
+header.solid nav {
+
+    background-color: white;
+    color: black;
+}
+
+nav .logo {
+
+    grid-area: logo;
+    align-self: center;
+}
+
+nav .navbar {
+
+    grid-area: navbar;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+
+    padding: 15px;
+}
+
+nav a:hover {
+
+    color: #00b7ff;
+}
+
+header.solid a.active {
+
+    color: #1abc9c;
+}

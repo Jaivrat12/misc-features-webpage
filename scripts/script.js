@@ -117,11 +117,14 @@ $(() => {
 
     // Tooltip
     // Mouse Following Tooltip
-    let tt_mouse_follow = $('#tt-mouse-follower')[0];
-    document.addEventListener('mousemove', e => {
-
-        tt_mouse_follow.style.left = e.pageX + 'px';
-        tt_mouse_follow.style.top = e.pageY - 8 + 'px';
+    const tt_mouse_follower = $('#tt-mouse-follower');
+    tt_mouse_follower.parent().on('mousemove', e => {
+        
+        let posLeft = e.pageX;
+        if($(window).width() - e.pageX < tt_mouse_follower.width() / 2 + 8)
+            posLeft = $(window).width() - tt_mouse_follower.width() / 2 - 10;    
+        tt_mouse_follower[0].style.left = posLeft + 'px';
+        tt_mouse_follower[0].style.top = e.pageY - 8 + 'px';
     });
 
 

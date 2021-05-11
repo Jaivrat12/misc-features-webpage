@@ -32,7 +32,7 @@ $(() => {
     let navExpanded = false;
     const updateNavBackColor = () => {
 
-        if($(this).scrollTop() > 80) {
+        if($(this).scrollTop() + $('header').height() - 5 > $('#home h1').offset().top) {
 
             $('header').addClass('solid');
             $('.navbar').removeClass('navbar-dark').addClass('navbar-light');
@@ -74,13 +74,10 @@ $(() => {
         }
         else {
 
-            btn.removeClass(closeIcon).children().addClass(openIcon);
+            btn.removeClass(closeIcon)
+               .children().addClass(openIcon);
 
-            if($(this).scrollTop() < 80) {
-
-                $('header').removeClass('solid');
-                $('.navbar').removeClass('navbar-light').addClass('navbar-dark');
-            }
+            setTimeout(updateNavBackColor, 400);
         }
     });
 

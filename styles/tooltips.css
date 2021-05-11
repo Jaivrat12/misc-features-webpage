@@ -128,6 +128,7 @@
     width: 48% !important;
     z-index: 1;
     opacity: 0;
+    pointer-events: none;
     transition-duration: 0.5s;
 }
 

@@ -43,8 +43,6 @@ Youtube API & 'iframe'
   - Search for a video, and again, a loading
     animation is shown until it's complete.
 
-That's All! Thank You for watching!
-
 <!--
 <div class="more-features">
     <span>ADDITIONAL FEATURES</span>

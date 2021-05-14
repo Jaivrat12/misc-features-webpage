@@ -1,7 +1,11 @@
 This is the final major version of my project, the previous two (alpha and beta) can be viewed by changing to the respective branch.
-Alpha Version was the very first one & almost everything was implemented in this one, but the only exception being that it wasn't Moblie Responsive.
-Beta Version then added some very minor features/components and looks a bit different than alpha one visually and has a drastic change compared to the alpha version in terms of HTML and CSS, Scripts were mixed together.
-The Final Version (main branch) is same as beta version visually, but the scripts are now more modular than ever!
+
+  - Alpha Version was the very first one & almost everything was implemented in this one, but the only exception being that it wasn't Moblie Responsive.
+  - Beta Version then added some very minor features/components and looks a bit different than alpha one visually and has a drastic change compared to the alpha version in terms of HTML and CSS, Scripts were mixed together.
+  - The Final Version (main branch) is same as beta version visually, but the scripts are now more modular than ever!
+
+
+Here's the list of most of the things this page has to show! (Still needs to be edited)
 
 A Preloader [copied google's UI :p]
 

@@ -119,6 +119,10 @@
     transition-property: opacity;
 }
 
+.card:hover #tt-mouse-follower {
+    opacity: 0.95;
+}
+
 /* WIERDLY ANIMATED TOOLTIP */
 .tt-flip-open1, .tt-flip-open2 {
 

@@ -1,7 +1,7 @@
 This is the final major version of my project, the previous two (alpha and beta) can be viewed by changing to the respective branch.
 
-  - (https://github.com/Jaivrat12/misc-features-webpage/tree/alpha-version)[Alpha Version] was the very first one & almost everything was implemented in this one, but the only exception being that it wasn't Moblie Responsive. You can see this alpha version (https://jaivrat12.github.io/misc-features-alpha/)[HERE!].
-  - (https://github.com/Jaivrat12/misc-features-webpage/tree/beta-version)[Beta Version] then added some very minor features/components and looks a bit different than alpha one visually and has a drastic change compared to the alpha version in terms of HTML and CSS as Bootstrap was used to make it mobile responsive, Scripts were mixed together into a single file.
+  - [Alpha Version](https://github.com/Jaivrat12/misc-features-webpage/tree/alpha-version) was the very first one & almost everything was implemented in this one, but the only exception being that it wasn't Moblie Responsive. You can see this alpha version [HERE!](https://jaivrat12.github.io/misc-features-alpha/).
+  - [Beta Version](https://github.com/Jaivrat12/misc-features-webpage/tree/beta-version) then added some very minor features/components and looks a bit different than alpha one visually and has a drastic change compared to the alpha version in terms of HTML and CSS as Bootstrap was used to make it mobile responsive, Scripts were mixed together into a single file.
   - The Final Version (this one, main branch) is same as beta version visually, but the scripts are now more modular than ever!
 
 
